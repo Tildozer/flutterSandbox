@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "appBar.dart" as custom;
+import "counter.dart";
 
 class Scaffold extends StatelessWidget{
   const Scaffold({super.key});
@@ -15,8 +16,9 @@ class Scaffold extends StatelessWidget{
               style: Theme.of(context).primaryTextTheme.titleLarge
             ),
           ),
-          const Expanded(child: Center(child: Text("Hello World"),),)
+          Counter(),
         ],
+
       ),
     );
   }
