@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:flutter/services.dart";
 
 class TitleMenu extends StatelessWidget implements PreferredSizeWidget {
   const TitleMenu({required this.title, super.key});
@@ -16,30 +17,27 @@ class TitleMenu extends StatelessWidget implements PreferredSizeWidget {
       fontWeight: FontWeight.bold,
     );
 
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarIconBrightness: Brightness.light,
+        statusBarColor: Colors.transparent,
+      ),
+    );
+
     return Align(
       alignment: Alignment.bottomLeft,
       child: Container(
-        height: preferredSize.height,
-        padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(color: Colors.black54),
+        height: 200,
+        decoration: BoxDecoration(color: Colors.black87),
+        padding: const EdgeInsets.only(bottom: 12),
+        margin: const EdgeInsets.only(bottom: 8),
         child: Row(
           children: [
-            IconButton(
-              icon: Icon(Icons.menu),
-              tooltip: "Navigation menu",
-              onPressed: () => print("hello"),
-              color: Colors.white,
-            ),
             Expanded(
-              child: Center(
+              child: Align(
+                alignment: Alignment.bottomCenter,
                 child: DefaultTextStyle(style: textStyle, child: title),
               ),
-            ),
-            IconButton(
-              icon: Icon(Icons.search),
-              tooltip: "Search",
-              onPressed: () => print("search"),
-              color: Colors.white,
             ),
           ],
         ),

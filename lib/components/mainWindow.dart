@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import "counter.dart";
+import 'package:sandbox/pages/home.dart';
 
 class MainWindow extends StatelessWidget {
   const MainWindow({super.key});
@@ -8,7 +8,7 @@ class MainWindow extends StatelessWidget {
   Widget build(BuildContext context) {
     return TabBarView(
       children: [
-        Counter(),
+        Home(),
         Icon(Icons.face_2_outlined),
         Icon(Icons.ac_unit_sharp),
       ],
