@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import "components/appBar.dart";
-import "components/windowSelector.dart";
-import "components/mainWindow.dart";
+import "widgets/appBar.dart";
+import "widgets/windowSelector.dart";
+import "widgets/mainWindow.dart";
 
 class MainApp extends StatefulWidget {
   const MainApp({super.key});

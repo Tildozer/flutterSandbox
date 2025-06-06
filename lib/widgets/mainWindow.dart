@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sandbox/pages/home.dart';
+import 'package:sandbox/routes/home.dart';
 
 class MainWindow extends StatelessWidget {
   const MainWindow({super.key});

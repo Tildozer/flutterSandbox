@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sandbox/components/counter.dart';
+import 'package:sandbox/widgets/counter.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
