@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import "appBar.dart";
-import "counter.dart";
+import "windowSelector.dart";
+import "mainWindow.dart";
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -9,12 +10,13 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Sandbox",
-      // home: SafeArea(child: custom.Scaffold()),
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
           extendBodyBehindAppBar: true,
-          appBar: MainMenu(title: Text("Sandbox")),
+          appBar: TitleMenu(title: Text("Sandbox")),
+          body: MainWindow(),
+          bottomNavigationBar: WindowSelector(),
         ),
       ),
     );

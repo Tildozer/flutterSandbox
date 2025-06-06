@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 
-class MainMenu extends StatelessWidget implements PreferredSizeWidget {
-  const MainMenu({required this.title, super.key});
+class TitleMenu extends StatelessWidget implements PreferredSizeWidget {
+  const TitleMenu({required this.title, super.key});
 
   final Widget title;
 
@@ -29,7 +29,6 @@ class MainMenu extends StatelessWidget implements PreferredSizeWidget {
               tooltip: "Navigation menu",
               onPressed: () => print("hello"),
               color: Colors.white,
-              iconSize: 20,
             ),
             Expanded(
               child: Center(
@@ -41,7 +40,6 @@ class MainMenu extends StatelessWidget implements PreferredSizeWidget {
               tooltip: "Search",
               onPressed: () => print("search"),
               color: Colors.white,
-              iconSize: 20,
             ),
           ],
         ),
