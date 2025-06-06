@@ -18,7 +18,7 @@ class _CounterState extends State<Counter> {
 
   void _decrement() {
     setState(() {
-        _counter--;
+      _counter--;
     });
   }
 
@@ -27,7 +27,10 @@ class _CounterState extends State<Counter> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        ElevatedButton(onPressed: _counter > 0 ? _decrement : null, child: const Text("Decrement") ),
+        ElevatedButton(
+          onPressed: _counter > 0 ? _decrement : null,
+          child: const Text("Decrement"),
+        ),
         ElevatedButton(onPressed: _increment, child: const Text("Increment")),
         const SizedBox(width: 20),
         Text("Total: $_counter"),
