@@ -7,12 +7,13 @@ class WindowSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TabBar(
-      controller: controller,
-      tabs: const [
-        Tab(icon: Icon(Icons.account_box_outlined), text: "counter"),
-        Tab(icon: Icon(Icons.nearby_off_outlined), text: "page2"),
-        Tab(icon: Icon(Icons.g_translate_sharp), text: "page3"),
+    return BottomNavigationBar(
+      currentIndex: controller.index,
+      onTap: (index) => controller.animateTo(index),
+      items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.account_box_outlined), label: "counter"),
+        BottomNavigationBarItem(icon: Icon(Icons.nearby_off_outlined), label: "page2"),
+        BottomNavigationBarItem(icon: Icon(Icons.g_translate_sharp), label: "page3"),
       ],
     );
   }

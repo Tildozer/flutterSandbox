@@ -29,7 +29,7 @@ class TitleMenu extends StatelessWidget implements PreferredSizeWidget {
       child: Container(
         height: 200,
         decoration: BoxDecoration(color: Colors.black87),
-        padding: const EdgeInsets.only(bottom: 12),
+        padding: const EdgeInsets.only(bottom: 0, top: 12,),
         margin: const EdgeInsets.only(bottom: 8),
         child: Row(
           children: [
