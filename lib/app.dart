@@ -38,10 +38,10 @@ class _MainAppState extends State<MainApp> with TickerProviderStateMixin {
     return MaterialApp(
       title: "Sandbox",
       home: DefaultTabController(
-        length: 3,
+        length: _titles.length,
         child: Scaffold(
           appBar: TitleMenu(title: Text(_titles[_currIdx])),
-          body: MainWindow(),
+          body: MainWindow(controller: _tabController,),
           bottomNavigationBar: WindowSelector(controller: _tabController),
         ),
       ),
