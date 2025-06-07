@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import "widgets/appBar.dart";
-import "widgets/windowSelector.dart";
-import "widgets/mainWindow.dart";
+import "widgets/app_bar.dart";
+import "widgets/window_selector.dart";
+import "widgets/main_window.dart";
 
 class MainApp extends StatefulWidget {
   const MainApp({super.key});
@@ -41,7 +41,7 @@ class _MainAppState extends State<MainApp> with TickerProviderStateMixin {
         length: _titles.length,
         child: Scaffold(
           appBar: TitleMenu(title: Text(_titles[_currIdx])),
-          body: MainWindow(controller: _tabController,),
+          body: MainWindow(controller: _tabController),
           bottomNavigationBar: WindowSelector(controller: _tabController),
         ),
       ),

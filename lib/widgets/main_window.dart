@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sandbox/routes/home.dart';
+import 'package:sandbox/routes/list.dart';
 
 class MainWindow extends StatelessWidget {
   const MainWindow({required this.controller, super.key});
@@ -12,7 +13,7 @@ class MainWindow extends StatelessWidget {
       controller: controller,
       children: [
         Home(),
-        Icon(Icons.face_2_outlined),
+        ListMaker(count: 20),
         Icon(Icons.ac_unit_sharp),
       ],
     );
