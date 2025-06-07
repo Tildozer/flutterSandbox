@@ -24,17 +24,20 @@ class _CounterState extends State<Counter> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        ElevatedButton(
-          onPressed: _counter > 0 ? _decrement : null,
-          child: const Text("Decrement"),
-        ),
-        ElevatedButton(onPressed: _increment, child: const Text("Increment")),
-        const SizedBox(width: 20),
-        Text("Total: $_counter"),
-      ],
+    return Padding(
+      padding: EdgeInsetsGeometry.only(top: 8),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          ElevatedButton(
+            onPressed: _counter > 0 ? _decrement : null,
+            child: const Text("Decrement"),
+          ),
+          ElevatedButton(onPressed: _increment, child: const Text("Increment")),
+          const SizedBox(width: 20),
+          Text("Total: $_counter"),
+        ],
+      ),
     );
   }
 }

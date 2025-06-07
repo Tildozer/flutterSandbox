@@ -13,7 +13,7 @@ class MainWindow extends StatelessWidget {
       controller: controller,
       children: [
         Home(),
-        ListMaker(count: 20),
+        ListMaker(count: 40),
         Icon(Icons.ac_unit_sharp),
       ],
     );
